@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- html2pdf library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Search Section -->
+    <div id="search-section" class="container">
+        <h1><i class="fab fa-github"></i> GitHub Resume Builder</h1>
+        <p>Enter a GitHub username to generate a resume based on their profile and repositories.</p>
+        <div class="search-box">
+            <input type="text" id="username-input" placeholder="e.g., torvalds">
+            <button id="generate-btn">Generate Resume</button>
+        </div>
+        <p id="error-msg" class="error hidden">User not found or API limit reached.</p>
+        <div id="loader" class="loader hidden"></div>
+    </div>
+
+    <!-- Resume Section (Hidden by default) -->
+    <div id="resume-container" class="hidden">
+        <div class="controls">
+            <button id="back-btn" class="secondary-btn"><i class="fas fa-arrow-left"></i> Back</button>
+            <button id="download-btn" class="primary-btn"><i class="fas fa-download"></i> Download PDF</button>
+        </div>
+        
+        <!-- The actual resume that gets printed -->
+        <div id="resume" class="resume-paper">
+            <!-- Content will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
