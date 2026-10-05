@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f6f8fa;
+    color: #24292f;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.container h1 { margin-bottom: 10px; }
+.container p { margin-bottom: 20px; color: #57606a; }
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#generate-btn, .primary-btn {
+    background-color: #2da44e;
+    color: white;
+}
+
+#generate-btn:hover, .primary-btn:hover { background-color: #2c974b; }
+
+.secondary-btn {
+    background-color: #ebecf0;
+    color: #24292f;
+}
+
+.secondary-btn:hover { background-color: #d0d7de; }
+
+.hidden { display: none !important; }
+.error { color: #cf222e; margin-top: 15px; font-weight: 600; }
+
+/* Loader */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2da44e;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Resume Paper Style */
+#resume-container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.resume-paper {
+    background: white;
+    padding: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+/* Resume Inner Elements */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #eaecef;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.header h1 { font-size: 32px; }
+.header p { color: #57606a; margin-top: 5px; }
+
+.contact-info {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #24292f;
+}
+
+.contact-info i { color: #57606a; }
+
+.section-title {
+    font-size: 20px;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 5px;
+    margin: 25px 0 15px;
+    color: #0969da;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background: #f6f8fa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #d0d7de;
+}
+
+.stat-box h3 { font-size: 24px; color: #24292f; }
+.stat-box p { font-size: 12px; color: #57606a; text-transform: uppercase; }
+
+.repo-list { display: flex; flex-direction: column; gap: 15px; }
+
+.repo-item {
+    padding: 15px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+}
+
+.repo-item h3 { color: #0969da; margin-bottom: 5px; }
+.repo-item p { font-size: 14px; color: #57606a; margin-bottom: 10px; }
+
+.repo-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #57606a;
+}
+
+.repo-meta span { display: flex; align-items: center; gap: 4px; }
